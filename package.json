@@ -1,30 +1,16 @@
 {
-  "name": "nodejs-express-sequelize-postgresql",
+  "name": "plantagrotech",
   "version": "1.0.0",
-  "description": "Node.js Rest Apis with Express, Sequelize & PostgreSQL",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "nodejs",
-    "express",
-    "sequelize",
-    "rest",
-    "api",
-    "postgresql"
-  ],
-  "author": "bezkoder",
+  "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "pg": "^8.15.6",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.32.0"
+    "express": "^5.1.0"
   }
 }
