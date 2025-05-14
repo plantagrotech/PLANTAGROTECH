@@ -52,6 +52,10 @@ exports.findAll = (req, res) => {
     });
 };
 
+exports.dummy = (req, res) => {
+   res.send({name:'Dev',email:'test@gmail.com','role':'developer'})
+};
+
 // Find a single Product with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;
