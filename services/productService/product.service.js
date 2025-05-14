@@ -53,7 +53,7 @@
 // };
 
 exports.dummy = (req, res) => {
-   res.send({name:'Dev',email:'test@gmail.com','role':'developer'})
+   res.send({productID:'1233-3434-3434-25',productName:'Sudhir','status':'Inactive'})
 };
 
 // // Find a single Product with an id
