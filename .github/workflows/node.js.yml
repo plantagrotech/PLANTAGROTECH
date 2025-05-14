@@ -20,13 +20,17 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        cache-dependency-path: PLANTAGROTECH/package-lock.json
+     - uses: actions/checkout@v4
+     - name: Install pnpm
+       uses: pnpm/action-setup@v4.0.0
+     - name: Use Node.js ${{ matrix.node-version }}
+       uses: actions/setup-node@v4
+       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: pm2  pm2 restart apiserver
+        cache: 'pnpm'
+        cache-dependency-path: |
+         ./frontend/pnpm-lock.yaml
+         ./backend/pnpm-lock.yaml
+     - run: npm ci
+     - run: npm run build --if-present
+     - run: pm2  pm2 restart apiserver
